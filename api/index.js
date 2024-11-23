@@ -7,7 +7,12 @@ import dbConnect from "../config/database.js";
 dotenv.config();
 
 const app = express();
-
+app.get("/",(req, res) => {
+  res.json({
+    "success": true,
+    "message": "server running successfully!",
+  })
+})
 const PORT = process.env.PORT || 3000;  
 
 
